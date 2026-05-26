@@ -1,6 +1,6 @@
-# STM32-HAL-Modbus-Slave
+# STM32-HAL-Modbus-Server
 
-A lightweight Modbus RTU slave protocol stack based on STM32 HAL library. Supports automatic RS485/TTL switching, Flash-based configuration storage, and is compatible with all STM32 series.
+A lightweight Modbus RTU server protocol stack based on STM32 HAL library. Supports automatic RS485/TTL switching, Flash-based configuration storage, and is compatible with all STM32 series.
 
 ## Version Selection
 
@@ -13,11 +13,11 @@ This project provides two major versions. Choose the one that best fits your nee
 
 ### V1.X - Stable Version
 
-A mature and stable Modbus RTU slave implementation with the following features:
+A mature and stable Modbus RTU server implementation with the following features:
 
 - Standard Modbus function codes (0x01-0x06, 0x0F, 0x10)
 - Custom function code 0x64 for online configuration
-- Flash-based non-volatile storage for slave address and baud rate
+- Flash-based non-volatile storage for server address and baud rate
 - RS485/RS232/TTL interface support
 - Broadcast recovery mode (address 0xFF)
 - Ping-pong buffer mechanism for reliable communication
@@ -29,9 +29,9 @@ A mature and stable Modbus RTU slave implementation with the following features:
 
 ### V2.X - Multi-Instance Version
 
-A completely redesigned Modbus slave library with OOP-C style architecture:
+A completely redesigned Modbus server library with OOP-C style architecture:
 
-- **Multi-Instance Support**: Run multiple independent Modbus slaves on different UARTs
+- **Multi-Instance Support**: Run multiple independent Modbus servers on different UARTs
 - **Runtime Configuration**: All settings passed via initialization, no static macros
 - **Data Source Decoupling**: Multiple instances can share one data source
 - **Callback Mechanism**: Custom function code 0x64 via application callbacks
